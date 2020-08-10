@@ -1,0 +1,48 @@
+# PostgreSQL. Versions 9.3 and up are supported.
+#
+# Install the pg driver:
+#   gem install pg
+# On macOS with Homebrew:
+#   gem install pg -- --with-pg-config=/usr/local/bin/pg_config
+# On macOS with MacPorts:
+#   gem install pg -- --with-pg-config=/opt/local/lib/postgresql84/bin/pg_config
+# On Windows:
+#   gem install pg
+#       Choose the win32 build.
+#       Install PostgreSQL and put its /bin directory on your path.
+#
+# Configure Using Gemfile
+# gem 'pg'
+#
+default: &default
+  adapter: mysql2
+  host: <%= ENV['ror_host_db'] %>
+  port: <%= ENV['ror_port_db'] %>
+  database: <%= ENV['ror_dbname'] %>
+  username: <%= ENV['ror_user'] %>
+  password: <%= ENV['ror_pass'] %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+production:
+  adapter: mysql2
+  host: <%= ENV['ror_host_db'] %>
+  port: <%= ENV['ror_port_db'] %>
+  database: <%= ENV['ror_dbname'] %>
+  username: <%= ENV['ror_user'] %>
+  password: <%= ENV['ror_pass'] %>
+
+development:
+  adapter: mysql2
+  host: <%= ENV['ror_host_db'] %>
+  port: <%= ENV['ror_port_db'] %>
+  database: <%= ENV['ror_dbname'] %>
+  username: <%= ENV['ror_user'] %>
+  password: <%= ENV['ror_pass'] %>
+
+test:
+  adapter: mysql2
+  host: <%= ENV['ror_host_db'] %>
+  port: <%= ENV['ror_port_db'] %>
+  database: <%= ENV['ror_dbname'] %>
+  username: <%= ENV['ror_user'] %>
+  password: <%= ENV['ror_pass'] %>
