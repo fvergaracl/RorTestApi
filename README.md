@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Caracteristicas
 
-Things you may want to cover:
+Esta es una prueba de api hecha en Ruby on Rails. 
 
-* Ruby version
+#### Endpoint
+Endpoint destinado para el almacenamiento de lugares (CRUD) , con los siguientes atributos:
+* nombre
+* latitud
+* logitud
+* urlmapa
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Endpoint: *api/v1/lugares*
